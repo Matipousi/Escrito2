@@ -22,6 +22,9 @@
             text-decoration: none;
             color: #000000;
         }
+        .navbar{
+            background-color: #e1e1e1;
+        }
     </style>
 </head>
 <body>
@@ -34,13 +37,15 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
       <div class="navbar-nav">
-        <a class="nav-link active" aria-current="page" href="#">Home</a>
-        <a class="nav-link" href="#">Features</a>
-        <a class="nav-link" href="#">Pricing</a>
-        <a class="nav-link disabled" aria-disabled="true">Disabled</a>
-      </div>
+        <a class="nav-link" aria-current="page" href="/escrito">Home</a>
+        <a class="nav-link" href="/login">Log-in</a>
+        <a class="nav-link" href="/register">Register</a>
+        </div>
     </div>
   </div>
 </nav>
+
+@yield('content')
+
 </body>
 </html>

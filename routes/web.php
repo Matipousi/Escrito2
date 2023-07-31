@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 
+use App\Http\Controllers\LoginController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -18,5 +19,15 @@ Route::get('/', function () {
 });
 
 Route::get('/escrito', function () {
-    return view('app');
+    return view('app'); 
 });
+
+Route::get('/login', function () {
+    return view('login');
+});
+
+Route::get('/register', function () {
+    return view('register');
+});
+
+Route::post('/menu',  [RegisterController::class, 'store'])->name('registerFunc');
