@@ -50,7 +50,7 @@ border-bottom-right-radius: .3rem;
   style="background-image: url('https://mdbcdn.b-cdn.net/img/Photos/new-templates/search-box/img4.webp');">
   <div class="vh-100 mask gradient-custom-3">
 
-<form action="{{ route('menu') }}" method="POST">
+
 @csrf
 <section class="h-100 gradient-form" >
     <div class="container py-5 h-100">
@@ -80,14 +80,14 @@ border-bottom-right-radius: .3rem;
                     </div>
   
                     <div class="text-center pt-1 mb-5 pb-1">
-                      <button class="btn btn-primary btn-block fa-lg gradient-custom-2 mb-3" type="button"><a class="text-white" href="action={{ route('menu')}} method('POST')">Log in</a>
+                      <button class="btn btn-primary btn-block fa-lg gradient-custom-2 mb-3" type="button">Log in
                       </button>
                       <a class="text-muted" href="#!">Forgot password?</a>
                     </div>
   
                     <div class="d-flex align-items-center justify-content-center pb-4">
                       <p class="mb-0 me-2">Don't have an account?</p>
-                      <button onclick="location.href='/registerpage'" type="button" class="btn btn-outline-danger">Create new</button>
+                      <button onclick="location.href='/register'" type="button" class="btn btn-outline-danger">Create new</button>
                     </div>
   
                   </form>
@@ -105,5 +105,4 @@ border-bottom-right-radius: .3rem;
       </div>
     </div>
   </section>
-</form>
 @endsection
