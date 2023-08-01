@@ -30,4 +30,18 @@ Route::get('/register', function () {
     return view('register');
 });
 
-Route::post('/menu',  [RegisterController::class, 'store'])->name('registerFunc');
+Route::get('/home', function () {
+    return view('home');
+});
+
+Route::get('/info', function () {
+    return view('info');
+});
+
+Route::post('/login',  [RegisterController::class, 'store'])->name('registerFunc');
+Route::post('/home',  [LoginController::class, 'store'])->name('loginFunc');
+Route::get('/', function() {
+$products = products::orderBy('created_at', 'desc')->get();
+return view('home', ['products' => $products
+]);
+});

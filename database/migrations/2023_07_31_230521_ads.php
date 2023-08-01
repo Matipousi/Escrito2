@@ -12,11 +12,12 @@ return new class extends Migration
     public function up(): void
     {
                 
-                schema::create('ads', function (Blueprint $table) {
-                    $table->id();
+                Schema::create('ads', function (Blueprint $table) {
+                    $table->bigIncrements('id');
                     $table->string('url');
                     $table->date('expire_date');
-                    $table->foreign('ads')->references('id')->on('product');
+                    $table->unsignedBigInteger('products_id');
+                    $table->foreign('products_id')->references('id')->on('products');
                     $table->timestamps();
                 });
     }
@@ -26,6 +27,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        schema::dropIfExists('ads');
+        Schema::dropIfExists('ads');
     }
 };

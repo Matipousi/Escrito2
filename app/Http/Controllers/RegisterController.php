@@ -19,8 +19,8 @@ class RegisterController extends Controller
             'email' => 'required|email',
             'password' => 'required|min:8'
         ]);
-        $user = User::create(request(['name', 'email', 'password']));
-        auth()->login($user);
+        $sellers = sellers::create(request(['name', 'email', 'password']));
+        auth()->login($sellers);
         return redirect()->to('/login');
     }
 

@@ -73,7 +73,7 @@
 
                 <div class="d-flex justify-content-center">
                   <button type="button"
-                    class="btn btn-success btn-block btn-lg gradient-custom-4 text-body">Register</button>
+                    class="btn btn-success btn-block btn-lg gradient-custom-4 text-body"><a href="{{ route('registerFunc') }}">Register</a></button>
                 </div>
 
                 <p class="text-center text-muted mt-5 mb-0">Have already an account? <a href="/login"

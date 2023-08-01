@@ -11,10 +11,9 @@ return new class extends Migration
      */
     public function up(): void
     {
-                    
-                    schema::create('score', function (Blueprint $table) {
-                        $table->id();
-                        $table->int('number');
+                    Schema::create('scores', function (Blueprint $table) {
+                        $table->bigIncrements('id');
+                        $table->integer('number');
                         $table->timestamps();
                     });
     }
@@ -24,6 +23,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        schema::dropIfExists('score');
+        Schema::dropIfExists('score');
     }
 };
