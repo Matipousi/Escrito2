@@ -40,8 +40,4 @@ Route::get('/info', function () {
 
 Route::post('/login',  [RegisterController::class, 'store'])->name('registerFunc');
 Route::post('/home',  [LoginController::class, 'store'])->name('loginFunc');
-Route::get('/', function() {
-$products = products::orderBy('created_at', 'desc')->get();
-return view('home', ['products' => $products
-]);
-});
+Route::get('/product', [ProductController::class . '@index'])->name('productFunc'); 

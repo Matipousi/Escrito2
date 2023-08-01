@@ -10,7 +10,7 @@
     </style>
 
 
-  @foreach ($products as $product)
+  @foreach ($productFunc as $product)
     
     <div class="container mt-5 mb-5">
         <div class="d-flex justify-content-center row">
@@ -19,18 +19,16 @@
                     <div class="col-md-6 mt-1">
                         <h5> {{ route('productFunc', [title => $data->title]) }}">{{ $data->title}}</h5>
                         <div class="d-flex flex-row">
-                            <div class="ratings mr-2"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></div><span>{{ route('productFunc', [title => $data->title]) }}">{{ $data->title}}</span>
+                            <div class="ratings mr-2"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></div><span>{{ route('productFunc', [seller_id => $data->seller_id]) }}">{{ $data->seller_id}}</span>
                         </div>
-                        <div class="mt-1 mb-1 spec-1">>
-                        <div class="mt-1 mb-1 spec-1"><span>Unique design</span><span class="dot"></span><span>For men</span><span class="dot"></span><span>Casual<br></span></div>
-                        <p class="text-justify text-truncate para mb-0">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.<br><br></p>
+                        <p class="text-justify text-truncate para mb-0"><br>{{ route('productFunc', [description => $data->description]) }}">{{ $data->description}}<br></p>
                     </div>
                     <div class="align-items-center align-content-center col-md-3 border-left mt-1">
                         <div class="d-flex flex-row align-items-center">
-                            <h4 class="mr-1">$13.99</h4><span class="strike-text">$20.99</span>
+                            <h4 class="mr-1">{{ route('productFunc', [price => $data->price]) }}">{{ $data->price}}</h4>
                         </div>
                         <h6 class="text-success">Free shipping</h6>
-                        <div class="d-flex flex-column mt-4"><button class="btn btn-primary btn-sm" type="button">Details</button>                    
+                        <div class="d-flex flex-column mt-4"><button class="btn btn-primary btn-sm" type="button">Details</button>
                     </div>
                 </div>
             </div>
